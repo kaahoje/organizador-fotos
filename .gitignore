@@ -1,0 +1,19 @@
+**/.vs/
+**/Logs*
+**/bin/
+**/obj/
+**/Educacenso/*.txt
+**/packages/
+**/UploadFolder/
+*.tmp
+**/ExecuteAntesDeRodarNoCliente/
+**/i-educar/
+*.bin
+*FolderProfile.pubxml.user
+**.user
+*.user
+**.bin
+*hash.txt
+**hash.txt
+Prestação de contas/Educacao.Sagres.Web/NHibernate_hash.txt
+Prestação de contas/Educacao.Sagres.Web/NHibernate.bin
