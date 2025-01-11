@@ -1,13 +1,6 @@
 ﻿using OrganizadorDeFotos.Strategy;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrganizadorDeFotos
@@ -44,6 +37,7 @@ namespace OrganizadorDeFotos
             organizador.Substituir = ckSubstituir.Checked;
             organizador.ExcluirOriginal = ckExcluirOrigem.Checked;
             organizador.TipoOrganizacao = cbTipoOrganizacao.SelectedIndex;
+            organizador.SepararMidia = ckSeparaArquivosDeMidia.Checked;
             organizador.Notificacao = () =>
             {
                 // Usando Invoke para atualizar os componentes de UI

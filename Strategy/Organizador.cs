@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace OrganizadorDeFotos.Strategy
 {
@@ -15,6 +13,7 @@ namespace OrganizadorDeFotos.Strategy
         public bool ExcluirOriginal { get; set; }
         public int TipoOrganizacao { get; set; }
         public int NumeroArquivoAtual { get; set; }
+        public bool SepararMidia { get; set; }
         public Action Notificacao { get; set; }
         public string ArquivoAtual { get; set; }
         public decimal PorcentagemConcluida { get; set; }
@@ -49,30 +48,39 @@ namespace OrganizadorDeFotos.Strategy
         {
             var nomeArquivo = Path.GetFileName(arquivo.Key);
             var dirDestino = CriarDiretorioDestino(arquivo.Value);
+
             if (!Directory.Exists(dirDestino))
                 Directory.CreateDirectory(dirDestino);
 
             return $"{dirDestino}{nomeArquivo}";
         }
-
+        public bool VerificarSeEMidia(string path)
+        {
+            var mediaPattern = new Regex(
+                @".*\.(jpg|jpeg|png|gif|bmp|mp4|mkv|avi|mov)$",
+                RegexOptions.IgnoreCase);
+            return mediaPattern.IsMatch(path);
+        }
         public string CriarDiretorioDestino(FileInfo fileInfo)
         {
-            switch (TipoOrganizacao)
-            {
-                case 1: // Organiza por mês
-                    return $"{Destino}" +
-                        $"\\{fileInfo.LastWriteTime.Year}" +
-                        $"\\{fileInfo.LastWriteTime:MMM}\\";
-                case 2: // Organiza por ano
-                    return $"{Destino}" +
-                        $"\\{fileInfo.LastWriteTime.Year}\\";
-                default: // Organiza por dia
-                    return $"{Destino}" +
-                        $"\\{fileInfo.LastWriteTime.Year}" +
-                        $"\\{fileInfo.LastWriteTime:MMM}" +
-                        $"\\Dia {fileInfo.LastWriteTime.Day}\\";
+            if (VerificarSeEMidia(fileInfo.Name) || !SepararMidia)
+                switch (TipoOrganizacao)
+                {
+                    case 1: // Organiza por mês
+                        return $"{Destino}" +
+                            $"\\{fileInfo.LastWriteTime.Year}" +
+                            $"\\{fileInfo.LastWriteTime:MMM}\\";
+                    case 2: // Organiza por ano
+                        return $"{Destino}" +
+                            $"\\{fileInfo.LastWriteTime.Year}\\";
+                    default: // Organiza por dia
+                        return $"{Destino}" +
+                            $"\\{fileInfo.LastWriteTime.Year}" +
+                            $"\\{fileInfo.LastWriteTime:MMM}" +
+                            $"\\Dia {fileInfo.LastWriteTime.Day}\\";
 
-            }
+                }
+            return $"{Destino}\\Arquivos\\";
         }
     }
 }

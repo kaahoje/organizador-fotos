@@ -42,47 +42,53 @@
             this.cbTipoOrganizacao = new System.Windows.Forms.ComboBox();
             this.progress = new System.Windows.Forms.ProgressBar();
             this.lblProgress = new System.Windows.Forms.Label();
+            this.ckSeparaArquivosDeMidia = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pasta de origem:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Location = new System.Drawing.Point(9, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 16);
+            this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pasta de destino:";
             // 
             // txtOrigem
             // 
-            this.txtOrigem.Location = new System.Drawing.Point(127, 6);
+            this.txtOrigem.Location = new System.Drawing.Point(95, 5);
+            this.txtOrigem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOrigem.Name = "txtOrigem";
-            this.txtOrigem.Size = new System.Drawing.Size(471, 22);
+            this.txtOrigem.Size = new System.Drawing.Size(354, 20);
             this.txtOrigem.TabIndex = 2;
             this.txtOrigem.Text = "C:\\Users\\Leticia\\Desktop\\Teste do organizador\\origem";
             // 
             // txtDestino
             // 
-            this.txtDestino.Location = new System.Drawing.Point(129, 34);
+            this.txtDestino.Location = new System.Drawing.Point(97, 28);
+            this.txtDestino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(469, 22);
+            this.txtDestino.Size = new System.Drawing.Size(353, 20);
             this.txtDestino.TabIndex = 3;
             this.txtDestino.Text = "C:\\Users\\Leticia\\Desktop\\Teste do organizador\\destino";
             // 
             // btnOrigem
             // 
-            this.btnOrigem.Location = new System.Drawing.Point(604, 9);
+            this.btnOrigem.Location = new System.Drawing.Point(453, 7);
+            this.btnOrigem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrigem.Name = "btnOrigem";
-            this.btnOrigem.Size = new System.Drawing.Size(75, 23);
+            this.btnOrigem.Size = new System.Drawing.Size(56, 19);
             this.btnOrigem.TabIndex = 4;
             this.btnOrigem.Text = "Origem";
             this.btnOrigem.UseVisualStyleBackColor = true;
@@ -90,9 +96,10 @@
             // 
             // btnDestino
             // 
-            this.btnDestino.Location = new System.Drawing.Point(604, 37);
+            this.btnDestino.Location = new System.Drawing.Point(453, 30);
+            this.btnDestino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDestino.Name = "btnDestino";
-            this.btnDestino.Size = new System.Drawing.Size(75, 23);
+            this.btnDestino.Size = new System.Drawing.Size(56, 19);
             this.btnDestino.TabIndex = 5;
             this.btnDestino.Text = "Destino";
             this.btnDestino.UseVisualStyleBackColor = true;
@@ -101,18 +108,20 @@
             // ckExcluirOrigem
             // 
             this.ckExcluirOrigem.AutoSize = true;
-            this.ckExcluirOrigem.Location = new System.Drawing.Point(15, 62);
+            this.ckExcluirOrigem.Location = new System.Drawing.Point(11, 50);
+            this.ckExcluirOrigem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ckExcluirOrigem.Name = "ckExcluirOrigem";
-            this.ckExcluirOrigem.Size = new System.Drawing.Size(187, 20);
+            this.ckExcluirOrigem.Size = new System.Drawing.Size(149, 17);
             this.ckExcluirOrigem.TabIndex = 6;
             this.ckExcluirOrigem.Text = "Excluir arquivos de origem";
             this.ckExcluirOrigem.UseVisualStyleBackColor = true;
             // 
             // btnOrganizar
             // 
-            this.btnOrganizar.Location = new System.Drawing.Point(282, 247);
+            this.btnOrganizar.Location = new System.Drawing.Point(212, 201);
+            this.btnOrganizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrganizar.Name = "btnOrganizar";
-            this.btnOrganizar.Size = new System.Drawing.Size(102, 77);
+            this.btnOrganizar.Size = new System.Drawing.Size(76, 63);
             this.btnOrganizar.TabIndex = 7;
             this.btnOrganizar.Text = "Organizar";
             this.btnOrganizar.UseVisualStyleBackColor = true;
@@ -121,9 +130,10 @@
             // ckSubstituir
             // 
             this.ckSubstituir.AutoSize = true;
-            this.ckSubstituir.Location = new System.Drawing.Point(226, 62);
+            this.ckSubstituir.Location = new System.Drawing.Point(170, 50);
+            this.ckSubstituir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ckSubstituir.Name = "ckSubstituir";
-            this.ckSubstituir.Size = new System.Drawing.Size(83, 20);
+            this.ckSubstituir.Size = new System.Drawing.Size(69, 17);
             this.ckSubstituir.TabIndex = 8;
             this.ckSubstituir.Text = "Substituir";
             this.ckSubstituir.UseVisualStyleBackColor = true;
@@ -131,9 +141,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Location = new System.Drawing.Point(9, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 16);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Organizar por:";
             // 
@@ -144,31 +155,46 @@
             "Dia",
             "Mês",
             "Ano"});
-            this.cbTipoOrganizacao.Location = new System.Drawing.Point(109, 88);
+            this.cbTipoOrganizacao.Location = new System.Drawing.Point(82, 72);
+            this.cbTipoOrganizacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbTipoOrganizacao.Name = "cbTipoOrganizacao";
-            this.cbTipoOrganizacao.Size = new System.Drawing.Size(121, 24);
+            this.cbTipoOrganizacao.Size = new System.Drawing.Size(92, 21);
             this.cbTipoOrganizacao.TabIndex = 11;
             // 
             // progress
             // 
-            this.progress.Location = new System.Drawing.Point(15, 140);
+            this.progress.Location = new System.Drawing.Point(11, 114);
+            this.progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(671, 23);
+            this.progress.Size = new System.Drawing.Size(503, 19);
             this.progress.TabIndex = 12;
             // 
             // lblProgress
             // 
             this.lblProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgress.Location = new System.Drawing.Point(279, 173);
+            this.lblProgress.Location = new System.Drawing.Point(209, 141);
+            this.lblProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(105, 23);
+            this.lblProgress.Size = new System.Drawing.Size(79, 19);
             this.lblProgress.TabIndex = 13;
+            // 
+            // ckSeparaArquivosDeMidia
+            // 
+            this.ckSeparaArquivosDeMidia.AutoSize = true;
+            this.ckSeparaArquivosDeMidia.Location = new System.Drawing.Point(243, 50);
+            this.ckSeparaArquivosDeMidia.Margin = new System.Windows.Forms.Padding(2);
+            this.ckSeparaArquivosDeMidia.Name = "ckSeparaArquivosDeMidia";
+            this.ckSeparaArquivosDeMidia.Size = new System.Drawing.Size(220, 17);
+            this.ckSeparaArquivosDeMidia.TabIndex = 14;
+            this.ckSeparaArquivosDeMidia.Text = "Separar arquivos de mídia (fotos/vídeos)";
+            this.ckSeparaArquivosDeMidia.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 336);
+            this.ClientSize = new System.Drawing.Size(524, 273);
+            this.Controls.Add(this.ckSeparaArquivosDeMidia);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.progress);
             this.Controls.Add(this.cbTipoOrganizacao);
@@ -182,6 +208,7 @@
             this.Controls.Add(this.txtOrigem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Organizador de fotos";
             this.ResumeLayout(false);
@@ -205,6 +232,7 @@
         private System.Windows.Forms.ComboBox cbTipoOrganizacao;
         private System.Windows.Forms.ProgressBar progress;
         private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.CheckBox ckSeparaArquivosDeMidia;
     }
 }
 
