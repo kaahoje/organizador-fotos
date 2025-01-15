@@ -10,7 +10,9 @@ namespace OrganizadorDeFotos
         public Form1()
         {
             InitializeComponent();
-            cbTipoOrganizacao.SelectedIndex = 0;
+            cbTipoOrganizacao.SelectedIndex = 1;
+            txtOrigem.Text = "D:\\Letícia\\Celular (Adailton 16-01-2023)";
+            txtDestino.Text = "D:\\Letícia (Organizado)";
         }
 
         private void btnOrigem_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace OrganizadorDeFotos
         {
             var arquivoOrigem = new ArquivosDeOrigem(txtOrigem.Text);
             arquivoOrigem.Carregar();
-            var organizador = new Organizador(arquivoOrigem, txtDestino.Text);
+            var organizador = new Organizador(arquivoOrigem, txtOrigem.Text, txtDestino.Text);
             organizador.Substituir = ckSubstituir.Checked;
             organizador.ExcluirOriginal = ckExcluirOrigem.Checked;
             organizador.TipoOrganizacao = cbTipoOrganizacao.SelectedIndex;
@@ -42,7 +44,9 @@ namespace OrganizadorDeFotos
             {
                 // Usando Invoke para atualizar os componentes de UI
                 Invoke((MethodInvoker)delegate {
-                    lblProgress.Text = $"{organizador.NumeroArquivoAtual}/{arquivoOrigem.TotalDeArquivos}";
+                    lblProgress.Text = $"{organizador.NumeroArquivoAtual}/" +
+                    $"{arquivoOrigem.TotalDeArquivos} ({organizador.PorcentagemConcluida:n2} %)";
+                    lblArquivoAtual.Text = organizador.ArquivoAtual;
                     progress.Value = (int)organizador.PorcentagemConcluida;
                     Thread.Sleep(10);
                     if (organizador.PorcentagemConcluida == 100)

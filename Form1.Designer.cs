@@ -43,6 +43,8 @@
             this.progress = new System.Windows.Forms.ProgressBar();
             this.lblProgress = new System.Windows.Forms.Label();
             this.ckSeparaArquivosDeMidia = new System.Windows.Forms.CheckBox();
+            this.ckConverterHeicParaJpg = new System.Windows.Forms.CheckBox();
+            this.lblArquivoAtual = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -118,7 +120,7 @@
             // 
             // btnOrganizar
             // 
-            this.btnOrganizar.Location = new System.Drawing.Point(212, 201);
+            this.btnOrganizar.Location = new System.Drawing.Point(212, 220);
             this.btnOrganizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrganizar.Name = "btnOrganizar";
             this.btnOrganizar.Size = new System.Drawing.Size(76, 63);
@@ -130,7 +132,9 @@
             // ckSubstituir
             // 
             this.ckSubstituir.AutoSize = true;
-            this.ckSubstituir.Location = new System.Drawing.Point(170, 50);
+            this.ckSubstituir.Checked = true;
+            this.ckSubstituir.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckSubstituir.Location = new System.Drawing.Point(11, 71);
             this.ckSubstituir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ckSubstituir.Name = "ckSubstituir";
             this.ckSubstituir.Size = new System.Drawing.Size(69, 17);
@@ -141,7 +145,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 74);
+            this.label3.Location = new System.Drawing.Point(9, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
@@ -155,7 +159,7 @@
             "Dia",
             "Mês",
             "Ano"});
-            this.cbTipoOrganizacao.Location = new System.Drawing.Point(82, 72);
+            this.cbTipoOrganizacao.Location = new System.Drawing.Point(82, 134);
             this.cbTipoOrganizacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbTipoOrganizacao.Name = "cbTipoOrganizacao";
             this.cbTipoOrganizacao.Size = new System.Drawing.Size(92, 21);
@@ -163,7 +167,7 @@
             // 
             // progress
             // 
-            this.progress.Location = new System.Drawing.Point(11, 114);
+            this.progress.Location = new System.Drawing.Point(11, 159);
             this.progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progress.Name = "progress";
             this.progress.Size = new System.Drawing.Size(503, 19);
@@ -172,16 +176,18 @@
             // lblProgress
             // 
             this.lblProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgress.Location = new System.Drawing.Point(209, 141);
+            this.lblProgress.Location = new System.Drawing.Point(11, 199);
             this.lblProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(79, 19);
+            this.lblProgress.Size = new System.Drawing.Size(503, 19);
             this.lblProgress.TabIndex = 13;
             // 
             // ckSeparaArquivosDeMidia
             // 
             this.ckSeparaArquivosDeMidia.AutoSize = true;
-            this.ckSeparaArquivosDeMidia.Location = new System.Drawing.Point(243, 50);
+            this.ckSeparaArquivosDeMidia.Checked = true;
+            this.ckSeparaArquivosDeMidia.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckSeparaArquivosDeMidia.Location = new System.Drawing.Point(11, 92);
             this.ckSeparaArquivosDeMidia.Margin = new System.Windows.Forms.Padding(2);
             this.ckSeparaArquivosDeMidia.Name = "ckSeparaArquivosDeMidia";
             this.ckSeparaArquivosDeMidia.Size = new System.Drawing.Size(220, 17);
@@ -189,11 +195,35 @@
             this.ckSeparaArquivosDeMidia.Text = "Separar arquivos de mídia (fotos/vídeos)";
             this.ckSeparaArquivosDeMidia.UseVisualStyleBackColor = true;
             // 
+            // ckConverterHeicParaJpg
+            // 
+            this.ckConverterHeicParaJpg.AutoSize = true;
+            this.ckConverterHeicParaJpg.Checked = true;
+            this.ckConverterHeicParaJpg.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckConverterHeicParaJpg.Location = new System.Drawing.Point(11, 113);
+            this.ckConverterHeicParaJpg.Margin = new System.Windows.Forms.Padding(2);
+            this.ckConverterHeicParaJpg.Name = "ckConverterHeicParaJpg";
+            this.ckConverterHeicParaJpg.Size = new System.Drawing.Size(147, 17);
+            this.ckConverterHeicParaJpg.TabIndex = 15;
+            this.ckConverterHeicParaJpg.Text = "Converter HEIC para JPG";
+            this.ckConverterHeicParaJpg.UseVisualStyleBackColor = true;
+            // 
+            // lblArquivoAtual
+            // 
+            this.lblArquivoAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArquivoAtual.Location = new System.Drawing.Point(11, 180);
+            this.lblArquivoAtual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArquivoAtual.Name = "lblArquivoAtual";
+            this.lblArquivoAtual.Size = new System.Drawing.Size(502, 19);
+            this.lblArquivoAtual.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 273);
+            this.ClientSize = new System.Drawing.Size(524, 291);
+            this.Controls.Add(this.lblArquivoAtual);
+            this.Controls.Add(this.ckConverterHeicParaJpg);
             this.Controls.Add(this.ckSeparaArquivosDeMidia);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.progress);
@@ -233,6 +263,8 @@
         private System.Windows.Forms.ProgressBar progress;
         private System.Windows.Forms.Label lblProgress;
         private System.Windows.Forms.CheckBox ckSeparaArquivosDeMidia;
+        private System.Windows.Forms.CheckBox ckConverterHeicParaJpg;
+        private System.Windows.Forms.Label lblArquivoAtual;
     }
 }
 
